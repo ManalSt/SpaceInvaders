@@ -21,8 +21,35 @@ Toujours avec la même demarche que la story précédente, nous allons positionn
 Suite à l'écriture du test, des nouvelles méthodes ont été créé (positionnerUnNouveauVaisseau), de nouvelles classes sont apparues (Vaisseau) et une modification de la méthode toString. Pour cette story, le refactoring sera un Extract Methode qui  va nous permettre de remplacer, par exemple, rapidement l'instruction vaisseau!=null dans la méthode toString par un appel à la nouvelle méthode this.aUnVaisseau() avec le raccourci ALT+SHIFT+M. Toujours dans le meme story, nous avons mis au point deux tests qui permettent de ne pas déplacer le vaisseau en dehors des limites. Cela nous donne une modification de la méthode 'positionnerUnNouveauVaisseau' qui contient des conditions sur le déplacement du vaisseau ( des conditions IF). Enfin, nous avons améliorer la qualité du code avec une dernière Extract Methode.
 
 
+
+
 ### Story n°3 : Déplacer le vaisseau vers la droite dans l'espace de jeu.
 
 Comme chaque, story, nous avons commencé par écrire un test. Ensuite, nous avons implémenté la méthode deplacerVaisseauVersLaDroite sur la classe SpaceInvaders et la méthode seDeplacerVersLaDroite dans la classe Vaisseau.
+
+
+## Fonctionalité n°2 : Dimensionner le vaisseu.
+
+Le but principal de cette fonctionalité est de donner des dimensions au vaisseau.
+
+Comme chaque fonctionalité, on implemente d'abord des tests : premièrement on implémente un test qui permet de dimenensionner un vaisseau, puis on implémente la méthode "positionnerUnNouveauVaisseau" pour faire passer le test au vert et on modifie la classe Vaisseau. Puis nous passons à l'étape du refractoring.
+
+Le deuxième test s'assure qu'il est impossible de positionner un vaisseau qui depasse de l'espace de jeu. Cela nous donne une nouvelle exception à lever et une nouvelle classe pour cette dernière, ainsi qu'une nouvelle implémentation pour la méthode. Les deux derniers tests sont responsable du déplacement du vaisseau en prenant compte de sa dimension  vers la gauche et vers la droite. Avec un refactoring, le fonctionnalité 3 est terminée.
+
+## Fonctionalité n°3: Choisir le vitesse du vaisseau.
+
+Pour cette fonctionalité nous allons définir la vitesse du vaisseau.
+
+Premièrement,la vitesse d'un objet peut-être définie par un vecteur v à 2 dimensions (dx et dy) où :
+
+* dx correspond au déplacement (c-a-d à un nombre de pixels pour le projet SpaceInvaders) effectué en 1 unité de temps sur l'axe des abscisses
+* dy correspondra au déplacement (c-a-d à un nombre de pixels pour le projet SpaceInvaders) effectué en 1 unité de temps sur l'axe des ordonnées.
+ 
+On ajoute donc un attribut "Vitesse" à la classe Vaisseau et on modifie les deux méthodes "deplacerVerslaDroite" et "deplacer versLaGauche" qui portent implicitement l'attribut vitesse sous forme de "-1" et "+1", on modifie donc ces deux valeures avec l'attribut vitesse et on l'initialise à 0 pour faire fonctionner le test correspondant.
+Pour deplacer le vaisseau vers la droite avec une vitesse donnée, on a encore besoin d'un test couvrant cette fonctionalité.Nous avons alors transformeé la signature de la méthode "positionnerUnNouveauVaisseau" dans les tests automatiquement à l'aide de l'IDE pour effectuer ce changement le plus rapidement possible et le plus surement possible pour que la méthode puisse prendre en compte le nouvel attribut vitesse.
+
+Après, nous nous sommes interessé au cas limites tels que : le vaisseau doit rester immobile car déjà en butée droite de l'espace de jeu et le vaisseau peut se déplacer partiellement et atteindre la butée, toujours avec la meme méthode du TDD. Puis nous nous sommes interessé au déplacement du vaisseau avec une vitesse quelcuonque.
+
+## Fonctionalité n° 4 : 
 
 
