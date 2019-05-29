@@ -50,6 +50,31 @@ Pour deplacer le vaisseau vers la droite avec une vitesse donnée, on a encore b
 
 Après, nous nous sommes interessé au cas limites tels que : le vaisseau doit rester immobile car déjà en butée droite de l'espace de jeu et le vaisseau peut se déplacer partiellement et atteindre la butée, toujours avec la meme méthode du TDD. Puis nous nous sommes interessé au déplacement du vaisseau avec une vitesse quelcuonque.
 
-## Fonctionalité n° 4 : 
+## Fonctionalité n° 4 : Tirer un missile depuis le vaisseau.
 
+
+L'objectif de cette fonctionnalité est de pouvoir tirer un missile depuis le vaisseau afin de donner un peu plus d'interactivité au jeu.
+
+Pour réaliser cet objectif, il faut faire en sorte, qu'à chaque tir, un nouvel objet missile soit ajouté au jeu, en prenant soin de bien positionner ce missile au dessus du vaisseau au moment du tir. Une fois tiré, le missile devra se déplacer à la verticale de manière autonome et disparaître du jeu une fois le haut de l'écran de jeu atteint.
+
+Premièrement, on utilise l'extract superclass depuis le menu de refactoring pour créer une nouvelle superclasse Sprint et qui sera la superclasse de Vaisseau. On effectue un petit refractoring au niveau des constructeurs des deux classes Sprite et Vaisseau.
+
+A l'issue de ce refactoring, le diagramme de classes autour de la classe Vaisseau devrait d'aileurs ressembler à :
+
+![Diagramme de Classes après refactoring](https://raw.githubusercontent.com/ManalSt/SpaceInvaders/master/Classes_S4_VaisseauSprite_ApresRefactoring.png)
+
+
+Nous avons aussi créer une nouvelle classe de test qui concerne le missile. Cela nous amène à créer une nouvelle Classe Missile et l'ajout d'un attribut de type Missile sur la classe SpaceInvaders.
+Au final, et après l'implémentation d'atres tests, j'ai obtenu le diagramme suivant :
+
+
+
+
+
+
+
+
+
+
+![Diagramme de Classes](https://raw.githubusercontent.com/ManalSt/SpaceInvaders/master/object.png)
 
