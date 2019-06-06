@@ -59,10 +59,6 @@ Comme chaque, story, nous avons commencé par écrire un test. Ensuite, nous avo
 
    Premièrement, on utilise l'extract superclass depuis le menu de refactoring pour créer une nouvelle superclasse Sprint et qui sera la superclasse de Vaisseau. On effectue un petit refractoring au niveau des constructeurs des deux classes Sprite et Vaisseau.
 
-   A l'issue de ce refactoring, le diagramme de classes autour de la classe Vaisseau devrait d'ailleurs ressembler à :
-
-![Diagramme de Classes après refactoring](https://raw.githubusercontent.com/ManalSt/SpaceInvaders/master/Classes_S4_VaisseauSprite_ApresRefactoring.png)
-
    Nous avons aussi créé une nouvelle classe de test qui concerne le missile. Cela nous amène à créer une nouvelle Classe Missile et l'ajout d'un attribut de type Missile sur la classe SpaceInvaders.
    Finalement, et après l'implémentation d'autres tests, j'ai obtenu le diagramme suivant :
 
