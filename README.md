@@ -79,4 +79,6 @@ Au final, et après l'implémentation d'atres tests, j'ai obtenu le diagramme su
 ![Diagramme de Classes](https://raw.githubusercontent.com/ManalSt/SpaceInvaders/master/object.png)
 
 De plus, nous avons mis en place le moteur graphique pour le jeu grace à un fichier zip qui contient les nouvelles classes correspondantes. Puis nous avons implémenté nos classes précedentes de facon a obtenir un affichage du jeu lors du lancement du code. Nous obtenons donc le diagramme suivant.
+![Diagramme de Classes après ajout du moteur graphique](https://raw.githubusercontent.com/ManalSt/SpaceInvaders/master/final.png)
+
 
